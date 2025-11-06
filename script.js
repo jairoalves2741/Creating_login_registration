@@ -37,10 +37,11 @@ function cadastrar(email, senha) {
 function login(email, senha) {
   signInWithEmailAndPassword(auth, email, senha)
     .then((userCredential) => {
-      alert("Login realizado com sucesso!");
+      localStorage.setItem('userEmail', email);
+      window.location.href = 'home.html';
     })
     .catch((error) => {
-      alert(error.message);
+      alert('Email ou senha incorretos');
     });
 }
 

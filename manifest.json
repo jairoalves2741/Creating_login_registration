@@ -1,8 +1,11 @@
+
 {
   "name": "Studio Sound-Max",
   "short_name": "SSM",
   "start_url": "./index.html",
   "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "icons": [
     {
       "src": "./icons/icon-192x192.png",
@@ -16,3 +19,4 @@
     }
   ]
 }
+

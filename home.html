@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Sound-Max - Tela Inicial</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao Studio Sound-Max</h1>
+        <button onclick="sair()">Sair</button>
+    </div>
+
+    <script>
+        // Verifica se tem usuário logado
+        if (!localStorage.getItem('userEmail')) {
+            window.location.href = 'login.html';
+        }
+
+        // Função simples para sair
+        function sair() {
+            localStorage.removeItem('userEmail');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

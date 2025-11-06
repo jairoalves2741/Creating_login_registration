@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <link rel="stylesheet" href="style.css" />
     <link rel="manifest" href="manifest.json" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registrar</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Studio Sound-Max - Cadastro</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button><a href="login.html">Fazer login</a></button>
-    <button><a href="index.html">Voltar à tela Inicial</a></button>
+    <div class="container">
+      <h2>Cadastro</h2>
+
+      <form
+        id="registerForm"
+        onsubmit="event.preventDefault(); cadastrarLocal()"
+      >
+        <input type="email" id="email" placeholder="Email" required />
+        <input
+          type="password"
+          id="senha"
+          placeholder="Senha"
+          required
+          minlength="6"
+        />
+        <button type="submit">Cadastrar</button>
+      </form>
+
+      <div class="btn-navegacao">
+        <button onclick="location.href='index.html'">Tela Inicial</button>
+        <button onclick="location.href='login.html'">Fazer Login</button>
+      </div>
+    </div>
+
+    <script>
+      function cadastrarLocal() {
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("senha").value;
+        window.cadastrar(email, senha);
+      }
+    </script>
 
     <script type="module" src="script.js"></script>
   </body>
